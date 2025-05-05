@@ -9,21 +9,14 @@
 
 ---
 
+## ETAPE 0 INSTALL LE SERVER D'ABORD!!!
+
 ## ⚙️ Étape 1 – Lancer le pseudo-server (Docker)
 
 **Pré-requis Docker déjà installé sur la machine locale.**
 
 ```bash
-docker run -d --name devops-server \
-  -p 2222:22 \
-  --hostname devops \
-  debian:bullseye
-```
-
-Ensuite, connecte-toi en interactif pour les premières installations :
-
-```bash
-docker exec -it devops-server bash
+ssh root@localhost -p 2222
 ```
 
 ---
@@ -66,7 +59,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-Dans `~/.zshrc`, modifie cette ligne :
+Dans `~/.bashrc`, modifie cette ligne :
 
 ```bash
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -75,7 +68,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 Puis recharge :
 
 ```bash
-source ~/.zshrc
+source ~/.bashrc
 ```
 
 ---
