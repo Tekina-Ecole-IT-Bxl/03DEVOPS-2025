@@ -88,12 +88,15 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-### 3. Créer le fichier de config `~/.config/nvim/init.vim`
+### 3. Installer wget 
 
-Tu peux coller **la config Neovim** complète que tu as donnée :
+```bash
+apt install wget
+```
 
-```vim
-" == Ton code complet ici ==
+### 4. Télécharger la config nvim avec cet command 
+```bash
+wget -P ~/.config/nvim/ https://raw.githubusercontent.com/Farid212/config-files/refs/heads/master/nvim/init.vim
 ```
 
 Ensuite, dans Neovim, tape `:PlugInstall` pour installer tous les plugins.

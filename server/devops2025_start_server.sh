@@ -25,7 +25,7 @@ else
   fi
 
   # Creation and launch container
-  docker run -d --name ${CONTAINER_NAME} -p 2222:22 ${IMAGE_NAME}
+  docker run --privileged -d --name ${CONTAINER_NAME} -p 2222:22 ${IMAGE_NAME}
 
   echo "SSH access available on port 2222 (external)."
 fi
